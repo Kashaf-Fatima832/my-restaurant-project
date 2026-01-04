@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame | Menu</title>
+    <link rel="icon" type="image/x-icon" href="flaming.png">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="flaming.png" alt="Flame Logo">
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="menu.html">
+                        <li>Menu</li>
+                    </a>
+                    <a href="dashboard.html">
+                        <li>Dashboard</li>
+                    </a>
+                    <a href="about-us.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="sign-in.html">
+                        <li>Sign-In</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="account">
+                <ul>
+                    <a href="index.html">
+                        <li><i class="fa-solid fa-house-chimney"></i></li>
+                    </a>
+                    <li><i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i></li>
+                    <a href="cart.html">
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    </a>
+                    <a href="sign-in.html">
+                        <li><i class="fa-solid fa-user"></i></li>
+                    </a>
+                </ul>
+                <div class="search" id="searchinput2">
+                    <input type="search" placeholder="Search...">
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <div class="headerbar">
+            <i class="fa-solid fa-xmark" id="hdcross"></i>
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="menu.html">
+                        <li>Menu</li>
+                    </a>
+                    <a href="dashboard.html">
+                        <li>Dashboard</li>
+                    </a>
+                    <a href="about-us.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="sign-in.html">
+                        <li>Sign-In</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <h1>Our <span class="gradient-text">Menu</span></h1>
+        <p class="menu-tagline">Experience the taste of perfection. Filter by category below.</p>
+
+        <!-- CATEGORY BUTTONS -->
+        <div class="menu-categories">
+            <button class="active" onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('bbq')">BBQ</button>
+            <button onclick="filterMenu('fastfood')">Fast Food</button>
+            <button onclick="filterMenu('italian')">Italian</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+        </div>
+
+        <!-- MENU ITEMS -->
+        <div class="menu-items">
+
+            <!-- BBQ -->
+            <div class="menu-card bbq">
+                <img src="bbq.avif" alt="BBQ Item">
+                <h3>Chicken Tikka</h3>
+                <p>Smoky & juicy grilled chicken marinated in exotic spices.</p>
+                <span>Rs. 450</span>
+                <button class="Red_btn" onclick="addToCart('Chicken Tikka', 450)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card bbq">
+                <img src="bbq.avif" alt="BBQ Item">
+                <h3>Seekh Kabab</h3>
+                <p>Traditional spicy minced meat grilled to perfection.</p>
+                <span>Rs. 350</span>
+                <button class="Red_btn" onclick="addToCart('Seekh Kabab', 350)">Add to Cart</button>
+            </div>
+
+            <!-- FAST FOOD -->
+            <div class="menu-card fastfood">
+                <img src="burger.avif" alt="Fast Food">
+                <h3>Zinger Burger</h3>
+                <p>Crispy fried chicken with signature sauce.</p>
+                <span>Rs. 550</span>
+                <button class="Red_btn" onclick="addToCart('Zinger Burger', 550)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card fastfood">
+                <img src="burger.avif" alt="Fast Food">
+                <h3>French Fries</h3>
+                <p>Golden, salty, and perfectly crispy.</p>
+                <span>Rs. 250</span>
+                <button class="Red_btn" onclick="addToCart('French Fries', 250)">Add to Cart</button>
+            </div>
+
+            <!-- ITALIAN -->
+            <div class="menu-card italian">
+                <img src="pasta.jpg" alt="Italian">
+                <h3>Chicken Alfredo</h3>
+                <p>Fettuccine pasta tossed in rich creamy white sauce.</p>
+                <span>Rs. 850</span>
+                <button class="Red_btn" onclick="addToCart('Chicken Alfredo', 850)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card italian">
+                <img src="pasta.jpg" alt="Italian">
+                <h3>Margherita Pizza</h3>
+                <p>Classic delight with mozzarella and fresh basil.</p>
+                <span>Rs. 900</span>
+                <button class="Red_btn" onclick="addToCart('Margherita Pizza', 900)">Add to Cart</button>
+            </div>
+
+            <!-- DESSERTS -->
+            <div class="menu-card desserts">
+                <img src="pancake.jpg" alt="Dessert">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Rich and gooey molten chocolate cake.</p>
+                <span>Rs. 400</span>
+                <button class="Red_btn" onclick="addToCart('Chocolate Lava Cake', 400)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card desserts">
+                <img src="pancake.jpg" alt="Dessert">
+                <h3>Ice Cream Sundae</h3>
+                <p>Vanilla scoops with toppings and syrup.</p>
+                <span>Rs. 300</span>
+                <button class="Red_btn" onclick="addToCart('Ice Cream Sundae', 300)">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer1">
+            <div class="logo">
+                <img src="flaming.png" alt="">
+            </div>
+            <div>
+                <address>
+                    <p>☎️ +92 457-786-787</p>
+                    <p>📩 flame@gmail.com</p>
+                    <p>ℹ️ https://www.linkedin.com/in/flame-3689. </p>
+                    <p>📍 Main Road, Lahore <br>Pakistan</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-2">
+            <img src="flaming.png" alt=""> <br><br>
+            <h2>Powered by <em>Flame ®</em></h2> <br>
+            <p>© 2026-Flame-All rights reserved</p>
+        </div>
+        <div class="bran">
+            <h2>Our Branches</h2> <br><br>
+            <p>- Uptown Branch</p>
+            <p>- Downtown Branch</p>
+            <p>- City-Center Branch</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Inline Scripts for Menu Filter (Or move to script.js)
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-card');
+            const btns = document.querySelectorAll('.menu-categories button');
+
+            // Active Button styling
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function addToCart(itemName, price) {
+            alert(`✅ Added ${itemName} to cart! (Cart logic pending)`);
+            // In a real app, this would use LocalStorage to add to cart
+        }
+    </script>
+</body>
+
+</html>

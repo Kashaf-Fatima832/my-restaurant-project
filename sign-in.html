@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame|Sign-in</title>
+    <link rel="icon" type="image/x-icon" href="frr logo.png">
+</head>
+
+<body>
+    <div class="signin-container">
+        <div class="signin-box">
+            <h2>Sign In</h2>
+            <p>Welcome back! Please login to continue.</p>
+            <form id="signinForm" >
+                <div class="input-group">
+                    <label for="email" >Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-btn">
+                    <a href="index.html">
+                        <button type="button" class="Red_btn">Back</button>
+                    </a>
+                    <button type="submit" class="Red_btn">Sign In</button>
+
+                </div>
+
+            </form>
+            <p id="signinMessage" class="signin-message">
+                ✅ You have successfully signed in
+            </p>
+            <p class="signup-link">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
